@@ -6,7 +6,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint . --cache",
+    "lint:style": "yarn stylelint '**/*.scss' --cache",
+    "lint:all": "yarn lint & yarn lint:style",
+    "lint:fix": "yarn lint --fix",
+    "lint:fix-style": "yarn lint:style --fix",
+    "lint:fix-all": "yarn lint --fix & yarn lint:style --fix",
+    "format:fix": "yarn prettier '**/*.+(js|jsx|ts|tsx|html)' --write",
+    "format:styles": "yarn prettier '**/*.+(css|scss)' --write",
+    "clean": "rimraf build",
+    "clean:all": "yarn clean node_modules",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "@types/node": "20.2.5",
@@ -18,5 +28,24 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
+    "@typescript-eslint/eslint-plugin": "^5.59.8",
+    "@typescript-eslint/parser": "^5.59.8",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.2",
+    "plop": "^3.1.2",
+    "postcss": "^8.4.24",
+    "prettier": "^2.8.8",
+    "rimraf": "^5.0.1",
+    "stylelint": "^15.6.2",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard-scss": "^9.0.0"
   }
 }

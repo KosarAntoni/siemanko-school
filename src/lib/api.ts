@@ -2,13 +2,13 @@ export const fetchConfig = {
   endpoint: `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
   params: {
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
       Authorization: `Bearer ${process.env.CONTENTFUL_ACCESS_TOKEN}`,
     },
   },
   previewParams: {
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
       Authorization: `Bearer ${process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN}`,
     },
   },
@@ -17,10 +17,10 @@ export const fetchConfig = {
 export async function fetchGraphQL(
   query: string,
   preview: boolean | undefined = false,
-  options?: RequestInit["headers"]
+  options?: RequestInit['headers'],
 ) {
   const res = await fetch(fetchConfig.endpoint as string, {
-    method: "POST",
+    method: 'POST',
     ...options,
     ...(preview ? fetchConfig.previewParams : fetchConfig.params),
     body: JSON.stringify({ query }),
