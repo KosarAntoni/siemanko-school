@@ -14,11 +14,9 @@
     "lint:fix-all": "yarn lint --fix & yarn lint:style --fix",
     "format:fix": "yarn prettier '**/*.+(js|jsx|ts|tsx|html)' --write",
     "format:styles": "yarn prettier '**/*.+(css|scss)' --write",
-    "clean": "rimraf build",
+    "clean": "rimraf .next",
     "clean:all": "yarn clean node_modules",
-    "postinstall": "husky install",
-    "graphql-codegen:generate": "graphql-codegen -r dotenv/config --config codegen.ts",
-    "graphql-codegen:watch": "graphql-codegen --watch -r dotenv/config --config codegen.ts"
+    "postinstall": "husky install"
   },
   "dependencies": {
     "@types/node": "20.2.5",
@@ -36,8 +34,6 @@
   "devDependencies": {
     "@commitlint/cli": "^17.6.5",
     "@commitlint/config-conventional": "^17.6.5",
-    "@graphql-codegen/cli": "4.0.0",
-    "@graphql-codegen/client-preset": "4.0.0",
     "@typescript-eslint/eslint-plugin": "^5.59.8",
     "@typescript-eslint/parser": "^5.59.8",
     "eslint-config-prettier": "^8.8.0",
