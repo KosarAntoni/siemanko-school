@@ -14,15 +14,15 @@ export const fetchConfig = {
   },
 };
 
-export async function fetchGraphQL(
+export const fetchGraphQL = async <Data, Variables extends { preview?: boolean | null }>(
   query: string,
-  preview: boolean | undefined = false,
+  variables?: Variables,
   options?: RequestInit['headers'],
-) {
+): Promise<Data> => {
   const res = await fetch(fetchConfig.endpoint as string, {
     method: 'POST',
     ...options,
-    ...(preview ? fetchConfig.previewParams : fetchConfig.params),
+    ...(variables?.preview ? fetchConfig.previewParams : fetchConfig.params),
     body: JSON.stringify({ query }),
   });
 
@@ -35,4 +35,4 @@ export async function fetchGraphQL(
   }
 
   return json.data;
-}
+};
