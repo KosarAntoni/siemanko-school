@@ -4,7 +4,7 @@ export interface ButtonProps extends PropsWithChildren, Pick<ButtonHTMLAttribute
   className?: string;
   url?: string;
   onClick?: () => void;
-  color?: 'Orange' | 'White' | string;
-  style?: 'Solid' | 'Outline' | string;
-  size?: 'Big' | 'Regular' | 'Small' | string;
+  color?: 'Orange' | 'White';
+  style?: 'Solid' | 'Outline';
+  size?: 'Big' | 'Regular' | 'Small';
 }
