@@ -4,7 +4,13 @@ module.exports = {
     node: true,
     jest: true,
   },
-  extends: ['next', 'eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
+  extends: [
+    'next',
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+    'plugin:storybook/recommended',
+  ],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'simple-import-sort'],
   parserOptions: {
@@ -16,7 +22,14 @@ module.exports = {
     quotes: ['error', 'single'],
     'no-console': 'warn',
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: false }],
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        vars: 'all',
+        args: 'after-used',
+        ignoreRestSiblings: false,
+      },
+    ],
     '@typescript-eslint/explicit-function-return-type': 'warn',
     'no-empty': 'warn',
     'simple-import-sort/imports': [
