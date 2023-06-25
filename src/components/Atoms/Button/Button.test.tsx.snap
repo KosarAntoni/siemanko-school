@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders a Button as button 1`] = `
+<button
+  class="button buttonOrange buttonSolid buttonRegular"
+  type="button"
+>
+  Test
+</button>
+`;
+
+exports[`Button renders a Button as external link 1`] = `
+<a
+  class="button buttonWhite buttonOutline buttonSmall"
+  href="https://www.test.com/"
+  target="_blank"
+>
+  Test
+</a>
+`;
+
+exports[`Button renders a Button as intenal link 1`] = `
+<a
+  class="button buttonOrange buttonSolid buttonRegular"
+  href="/test"
+>
+  Test
+</a>
+`;
+
+exports[`Button renders a Button as span 1`] = `
+<span
+  class="button buttonOrange buttonSolid buttonBig"
+  data-testid="button-item"
+>
+  Test
+</span>
+`;

@@ -1,0 +1,59 @@
+.button {
+  padding: 1.2rem 1.5rem;
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.6rem;
+  background-color: var(--orange);
+  border-color: var(--orange);
+  border-style: solid;
+  border-radius: 0.5rem;
+  transition: transform 0.3s;
+
+  &Solid {
+    &:hover {
+      transform: translateY(-1px);
+    }
+  }
+
+  &White {
+    color: var(--orange);
+    background-color: var(--white);
+    border-color: var(--white);
+  }
+
+  &Outline {
+    background-color: transparent;
+    transition: background-color 0.3s, color 0.3s;
+
+    &.buttonWhite {
+      color: var(--white);
+
+      &:hover {
+        color: var(--orange);
+        background-color: var(--white);
+      }
+    }
+
+    &.buttonOrange {
+      color: var(--orange);
+
+      &:hover {
+        color: var(--white);
+        background-color: var(--orange);
+      }
+    }
+  }
+
+  &Big {
+    padding: 1.5rem 2rem;
+  }
+
+  &Small {
+    padding: 0.5rem 1.5rem;
+    font-size: 1.3rem;
+  }
+}
+
+button.button {
+  cursor: pointer;
+}
