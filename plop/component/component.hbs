@@ -1,16 +1,16 @@
-import React, { FC } from 'react';
-import classNames from 'classnames'
+import React from 'react';
+import clsx from 'clsx';
+{{#if styles}}
+
+import styles from './{{properCase name}}.styles.module.scss';
+{{/if}}
 {{#if models}}
 
 import { {{properCase name}}Props } from './{{properCase name}}.models';
 {{/if}}
-{{#if styles}}
 
-import './{{properCase name}}.styles.scss';
-{{/if}}
-
-const {{properCase name}}: FC{{#if models}}<{{properCase name}}Props>{{/if}} = ({ className }) => (
-  <div className={classNames('{{dashCase name}}', className)} data-testid="{{dashCase name}}-item">
+const {{properCase name}} = ({ className }: {{#if models}}{{properCase name}}Props{{/if}}): JSX.Element => (
+  <div className={clsx(styles.{{camelCase name}}, className)} data-testid="{{dashCase name}}-item">
     {' '}
   </div>
 );

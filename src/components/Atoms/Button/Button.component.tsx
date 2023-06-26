@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import Link from 'next/link';
 
@@ -6,7 +6,7 @@ import styles from './Button.styles.module.scss';
 
 import { ButtonProps } from './Button.models';
 
-const Button: FC<ButtonProps> = ({
+const Button = ({
   children,
   className,
   url,
@@ -15,13 +15,13 @@ const Button: FC<ButtonProps> = ({
   style = 'Solid',
   size = 'Regular',
   type = 'button',
-}) => {
+}: ButtonProps): JSX.Element => {
   const buttonClasses = clsx(
     styles.button,
-    className,
     color && styles[`button${color}`],
     style && styles[`button${style}`],
     size && styles[`button${size}`],
+    className,
   );
 
   if (url) {

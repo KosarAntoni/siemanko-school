@@ -53,12 +53,18 @@ module.exports = (plop) => {
         message: 'Add test file?',
         default: true,
       },
+      // {
+      //   type: 'confirm',
+      //   name: 'mock',
+      //   message: 'Add component props mock file?',
+      //   default: true,
+      //   when: (answers) => answers.test,
+      // },
       {
         type: 'confirm',
-        name: 'mock',
-        message: 'Add component props mock file?',
+        name: 'storybook',
+        message: 'Add stories file?',
         default: true,
-        when: (answers) => answers.test,
       },
     ],
     actions: (data) => {
@@ -77,7 +83,7 @@ module.exports = (plop) => {
         },
         {
           type: 'add',
-          path: `${componentsPath}/${directoryName}/{{properCase name}}/{{properCase name}}.styles.scss`,
+          path: `${componentsPath}/${directoryName}/{{properCase name}}/{{properCase name}}.styles.module.scss`,
           templateFile: 'plop/component/styles.hbs',
           skip: () => !data.styles && 'skip adding styles file',
         },
@@ -93,11 +99,17 @@ module.exports = (plop) => {
           templateFile: 'plop/component/test.hbs',
           skip: () => !data.test && 'skip adding test file, but why? =(',
         },
+        // {
+        //   type: 'add',
+        //   path: `${componentsPath}/${directoryName}/{{properCase name}}/{{properCase name}}.mock.ts`,
+        //   templateFile: 'plop/component/mock.hbs',
+        //   skip: () => (!data.test && 'skip adding mock file') || (!data.mock && 'skip adding mock file'),
+        // },
         {
           type: 'add',
-          path: `${componentsPath}/${directoryName}/{{properCase name}}/{{properCase name}}.mock.ts`,
-          templateFile: 'plop/component/mock.hbs',
-          skip: () => (!data.test && 'skip adding mock file') || (!data.mock && 'skip adding mock file'),
+          path: `${componentsPath}/${directoryName}/{{properCase name}}/{{properCase name}}.stories.ts`,
+          templateFile: 'plop/component/stories.hbs',
+          skip: () => !data.storybook && 'skip adding stories file',
         },
       ];
 

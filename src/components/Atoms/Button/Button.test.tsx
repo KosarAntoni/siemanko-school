@@ -2,8 +2,8 @@ import { fireEvent, render, screen } from '@testing-library/react';
 
 import Button from '.';
 
-describe('Button', () => {
-  it('renders a Button as button', () => {
+describe('Button component renders correctly', () => {
+  it('renders Button as button', () => {
     const testFunc = jest.fn();
     render(<Button onClick={testFunc}>Test</Button>);
 
@@ -21,7 +21,7 @@ describe('Button', () => {
     expect(buttonNode).toHaveClass('button buttonOrange buttonSolid buttonRegular');
   });
 
-  it('renders a Button as external link', () => {
+  it('renders Button as external link', () => {
     const url = 'https://www.test.com/';
     render(
       <Button url={url} style="Outline" color="White" size="Small">
@@ -44,7 +44,7 @@ describe('Button', () => {
     expect(buttonNode).toHaveClass('button buttonWhite buttonOutline buttonSmall');
   });
 
-  it('renders a Button as intenal link', () => {
+  it('renders Button as intenal link', () => {
     const url = '/test';
     render(<Button url={url}>Test</Button>);
 

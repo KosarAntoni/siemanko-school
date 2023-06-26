@@ -1,5 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Button component renders correctly renders Button as button 1`] = `
+<button
+  class="button buttonOrange buttonSolid buttonRegular"
+  type="button"
+>
+  Test
+</button>
+`;
+
+exports[`Button component renders correctly renders Button as external link 1`] = `
+<a
+  class="button buttonWhite buttonOutline buttonSmall"
+  href="https://www.test.com/"
+  target="_blank"
+>
+  Test
+</a>
+`;
+
+exports[`Button component renders correctly renders Button as intenal link 1`] = `
+<a
+  class="button buttonOrange buttonSolid buttonRegular"
+  href="/test"
+>
+  Test
+</a>
+`;
+
+exports[`Button component renders correctly renders a Button as button 1`] = `
+<button
+  class="button buttonOrange buttonSolid buttonRegular"
+  type="button"
+>
+  Test
+</button>
+`;
+
+exports[`Button component renders correctly renders a Button as external link 1`] = `
+<a
+  class="button buttonWhite buttonOutline buttonSmall"
+  href="https://www.test.com/"
+  target="_blank"
+>
+  Test
+</a>
+`;
+
+exports[`Button component renders correctly renders a Button as intenal link 1`] = `
+<a
+  class="button buttonOrange buttonSolid buttonRegular"
+  href="/test"
+>
+  Test
+</a>
+`;
+
+exports[`Button component renders correctly renders a Button as span 1`] = `
+<span
+  class="button buttonOrange buttonSolid buttonBig"
+  data-testid="button-item"
+>
+  Test
+</span>
+`;
+
 exports[`Button renders a Button as button 1`] = `
 <button
   class="button buttonOrange buttonSolid buttonRegular"
@@ -29,6 +94,80 @@ exports[`Button renders a Button as intenal link 1`] = `
 `;
 
 exports[`Button renders a Button as span 1`] = `
+<span
+  class="button buttonOrange buttonSolid buttonBig"
+  data-testid="button-item"
+>
+  Test
+</span>
+`;
+
+exports[`a Button component renders correctly renders a Button as button 1`] = `
+<button
+  class="button buttonOrange buttonSolid buttonRegular"
+  type="button"
+>
+  Test
+</button>
+`;
+
+exports[`a Button component renders correctly renders a Button as external link 1`] = `
+<a
+  class="button buttonWhite buttonOutline buttonSmall"
+  href="https://www.test.com/"
+  target="_blank"
+>
+  Test
+</a>
+`;
+
+exports[`a Button component renders correctly renders a Button as intenal link 1`] = `
+<a
+  class="button buttonOrange buttonSolid buttonRegular"
+  href="/test"
+>
+  Test
+</a>
+`;
+
+exports[`a Button component renders correctly renders a Button as span 1`] = `
+<span
+  class="button buttonOrange buttonSolid buttonBig"
+  data-testid="button-item"
+>
+  Test
+</span>
+`;
+
+exports[`the Button component renders correctly renders a Button as button 1`] = `
+<button
+  class="button buttonOrange buttonSolid buttonRegular"
+  type="button"
+>
+  Test
+</button>
+`;
+
+exports[`the Button component renders correctly renders a Button as external link 1`] = `
+<a
+  class="button buttonWhite buttonOutline buttonSmall"
+  href="https://www.test.com/"
+  target="_blank"
+>
+  Test
+</a>
+`;
+
+exports[`the Button component renders correctly renders a Button as intenal link 1`] = `
+<a
+  class="button buttonOrange buttonSolid buttonRegular"
+  href="/test"
+>
+  Test
+</a>
+`;
+
+exports[`the Button component renders correctly renders a Button as span 1`] = `
 <span
   class="button buttonOrange buttonSolid buttonBig"
   data-testid="button-item"
