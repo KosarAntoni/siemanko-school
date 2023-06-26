@@ -5,10 +5,13 @@ const upperFirstLetter = (string) => {
   return `${firstLetter.toUpperCase()}${rest}`;
 };
 
-const toPascalCase = (string) =>
+const toCamelCase = (string) =>
   string
     .split(' ')
-    .reduce((result, word) => [...result, upperFirstLetter(word)], [])
+    .reduce(
+      (result, word, index) => (index === 0 ? [...result, word.toLowerCase()] : [...result, upperFirstLetter(word)]),
+      [],
+    )
     .join('');
 
 const componentsPath = 'src/components';
@@ -68,7 +71,7 @@ module.exports = (plop) => {
       },
     ],
     actions: (data) => {
-      const directoryName = toPascalCase(data.newDirectory ? data.newDirectory : data.directory);
+      const directoryName = toCamelCase(data.newDirectory ? data.newDirectory : data.directory);
 
       const actionsList = [
         {
