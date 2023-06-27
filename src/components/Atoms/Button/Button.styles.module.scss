@@ -1,8 +1,9 @@
 .button {
-  padding: 1.2rem 1.5rem;
+  padding: 1.2rem 1.5rem 1rem;
   color: var(--white);
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.6rem;
+  font-family: 'ChunkFive Ex', sans-serif;
   background-color: var(--orange);
   border-color: var(--orange);
   border-style: solid;
@@ -35,7 +36,7 @@
     }
 
     &.buttonOrange {
-      color: var(--orange);
+      color: var(--white);
 
       &:hover {
         color: var(--white);
@@ -45,11 +46,11 @@
   }
 
   &Big {
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 2rem 1.3rem;
   }
 
   &Small {
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1.5rem 0.3rem;
     font-size: 1.3rem;
   }
 }

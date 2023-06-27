@@ -8,6 +8,7 @@ import { ButtonProps } from './Button.models';
 
 const Button = ({
   children,
+  text,
   className,
   url,
   onClick,
@@ -29,11 +30,11 @@ const Button = ({
 
     return internal ? (
       <Link href={url} className={buttonClasses}>
-        {children}
+        {text || children}
       </Link>
     ) : (
       <a href={url} className={buttonClasses} target="_blank">
-        {children}
+        {text || children}
       </a>
     );
   }
@@ -41,15 +42,15 @@ const Button = ({
   if (onClick) {
     return (
       <button type={type} onClick={onClick} className={buttonClasses}>
-        {children}
+        {text || children}
       </button>
     );
   }
 
   return (
-    <span className={buttonClasses} data-testid="button-item">
-      {children}
-    </span>
+    <div className={buttonClasses} data-testid="button-item">
+      {text || children}
+    </div>
   );
 };
 
