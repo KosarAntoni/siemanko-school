@@ -29,10 +29,10 @@ exports[`Button component renders correctly renders Button as intenal link 1`] =
 `;
 
 exports[`Button component renders correctly renders a Button as span 1`] = `
-<span
+<div
   class="button buttonOrange buttonSolid buttonBig"
   data-testid="button-item"
 >
   Test
-</span>
+</div>
 `;
