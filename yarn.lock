@@ -2345,6 +2345,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@contentful/rich-text-react-renderer@npm:^15.17.0":
+  version: 15.17.0
+  resolution: "@contentful/rich-text-react-renderer@npm:15.17.0"
+  dependencies:
+    "@contentful/rich-text-types": ^16.2.0
+  peerDependencies:
+    react: ^16.8.6 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.6 || ^17.0.0 || ^18.0.0
+  checksum: 3b2d44954fdb7bb125ac0a3234b7eac40e59aa1585a1c1a193c5cd797e09dbbe51f34ad2e912f64e6c3fb3de537606d4219cff6e62d2ec250a4992fcce188c32
+  languageName: node
+  linkType: hard
+
+"@contentful/rich-text-types@npm:^16.2.0":
+  version: 16.2.0
+  resolution: "@contentful/rich-text-types@npm:16.2.0"
+  checksum: ec9390201e7e7c1419b61efee12845169665b336fe866132515f61ed7ab6753a997d1336b13cb2962eb48db01deef4a5a035e929344eec41f1b58227d78ecff9
+  languageName: node
+  linkType: hard
+
 "@cspotcode/source-map-support@npm:^0.8.0":
   version: 0.8.1
   resolution: "@cspotcode/source-map-support@npm:0.8.1"
@@ -16286,7 +16305,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass-loader@npm:^13.2.2":
+"sass-loader@npm:^13.2.2, sass-loader@npm:^13.3.2":
   version: 13.3.2
   resolution: "sass-loader@npm:13.3.2"
   dependencies:
@@ -16590,6 +16609,8 @@ __metadata:
   dependencies:
     "@commitlint/cli": ^17.6.5
     "@commitlint/config-conventional": ^17.6.5
+    "@contentful/rich-text-react-renderer": ^15.17.0
+    "@contentful/rich-text-types": ^16.2.0
     "@storybook/addon-essentials": ^7.0.23
     "@storybook/addon-interactions": ^7.0.23
     "@storybook/addon-links": ^7.0.23
@@ -16623,13 +16644,16 @@ __metadata:
     prettier: ^2.8.8
     react: 18.2.0
     react-dom: 18.2.0
+    resolve-url-loader: ^5.0.0
     rimraf: ^5.0.1
     sass: ^1.62.1
+    sass-loader: ^13.3.2
     storybook: latest
     stylelint: ^15.6.2
     stylelint-config-prettier-scss: ^1.0.0
     stylelint-config-rational-order: ^0.1.2
     stylelint-config-standard-scss: ^9.0.0
+    tsconfig-paths-webpack-plugin: ^4.0.1
     typescript: 5.0.4
   languageName: unknown
   linkType: soft
@@ -18021,6 +18045,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tsconfig-paths-webpack-plugin@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "tsconfig-paths-webpack-plugin@npm:4.0.1"
+  dependencies:
+    chalk: ^4.1.0
+    enhanced-resolve: ^5.7.0
+    tsconfig-paths: ^4.1.2
+  checksum: a09e765c4939379fa060f78bbc906d0a7be541b9b49d3ad4744e99a2e87f28aa30d549a549196159bc5a50f420fdb1391b8eed360f47ee8ce40e15dcb800b5aa
+  languageName: node
+  linkType: hard
+
 "tsconfig-paths@npm:^3.14.1, tsconfig-paths@npm:^3.9.0":
   version: 3.14.2
   resolution: "tsconfig-paths@npm:3.14.2"
@@ -18033,7 +18068,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsconfig-paths@npm:^4.0.0":
+"tsconfig-paths@npm:^4.0.0, tsconfig-paths@npm:^4.1.2":
   version: 4.2.0
   resolution: "tsconfig-paths@npm:4.2.0"
   dependencies:
