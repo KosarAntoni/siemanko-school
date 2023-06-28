@@ -20,6 +20,18 @@ describe('Duplex component renders correctly', () => {
     expect(imageNode).toHaveAttribute('style', 'color: transparent; --translate-y: 0px;');
   });
 
+  it('renders Duplex with image on right side', () => {
+    render(<Duplex {...mock} imagePosition="Right" />);
+
+    const duplexNode = screen.getByTestId('duplex-item');
+
+    expect(duplexNode).toBeInTheDocument();
+
+    expect(duplexNode).toMatchSnapshot();
+
+    expect(duplexNode).toHaveClass('duplexImageOnRight');
+  });
+
   it('getOffset works correctly', () => {
     expect(getOffset(36, 573)).toBe(-3);
     expect(getOffset(-124, 720)).toBe(9);

@@ -34,3 +34,38 @@ exports[`Duplex component renders correctly renders Duplex 1`] = `
   </div>
 </section>
 `;
+
+exports[`Duplex component renders correctly renders Duplex with image on right side 1`] = `
+<section
+  class="duplex duplexImageOnRight"
+  data-testid="duplex-item"
+>
+  <img
+    alt="Cała ekipa instruktorów Siemanko"
+    data-nimg="1"
+    decoding="async"
+    height="700"
+    loading="lazy"
+    src="/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F39emsr6r0xu2%2F6VZJiGrlzCmDjIZdXNJkYe%2Feaf38e615f003e9f5f125031ee143296%2Fzaloga_siemanko_01.jpg&w=1200&q=75"
+    srcset="/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F39emsr6r0xu2%2F6VZJiGrlzCmDjIZdXNJkYe%2Feaf38e615f003e9f5f125031ee143296%2Fzaloga_siemanko_01.jpg&w=640&q=75 1x, /_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2F39emsr6r0xu2%2F6VZJiGrlzCmDjIZdXNJkYe%2Feaf38e615f003e9f5f125031ee143296%2Fzaloga_siemanko_01.jpg&w=1200&q=75 2x"
+    style="color: transparent; --translate-y: 0px;"
+    width="560"
+  />
+  <div
+    class="duplexContent"
+  >
+    <h2>
+      Kilka słów o nas
+    </h2>
+    <p>
+      Wszystko zaczęło się od pasji, która dziś dokonuje rewolucji w życiu naszym i naszych klientów. Wiedzieliśmy, że dokonamy wiele. Nie przypuszczaliśmy jednak, że prawdziwa pasja i systematyczna praca, tak szybko zaprowadzi nas na sam szczyt w ciągu zaledwie 5 lat!
+    </p>
+    <div
+      class="button buttonOrange buttonOutline buttonBig"
+      data-testid="button-item"
+    >
+      CZYTAJ WIĘCEJ
+    </div>
+  </div>
+</section>
+`;

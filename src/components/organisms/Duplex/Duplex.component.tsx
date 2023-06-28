@@ -1,3 +1,4 @@
+'use client';
 import React, { useRef } from 'react';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import clsx from 'clsx';
@@ -16,14 +17,25 @@ export const getOffset = (position: number, sectionHeight?: number): number => {
   return Math.round((position / (sectionHeight / 50)) * -1);
 };
 
-const Duplex = ({ className, image, headline, button, description }: DuplexProps): JSX.Element => {
+const Duplex = ({
+  className,
+  image,
+  headline,
+  button,
+  description,
+  imagePosition = 'Left',
+}: DuplexProps): JSX.Element => {
   const sectionsRef = useRef<HTMLElement>(null);
   const position = useElementPosition(sectionsRef);
 
   const sectionHeight = sectionsRef?.current?.offsetHeight;
 
   return (
-    <section ref={sectionsRef} className={clsx(styles.duplex, className)} data-testid="duplex-item">
+    <section
+      ref={sectionsRef}
+      className={clsx(styles.duplex, imagePosition === 'Right' && styles.duplexImageOnRight, className)}
+      data-testid="duplex-item"
+    >
       <Image
         src={image.url}
         alt={image.description}
@@ -34,7 +46,7 @@ const Duplex = ({ className, image, headline, button, description }: DuplexProps
       <div className={styles.duplexContent}>
         <h2>{headline}</h2>
         {description?.json && documentToReactComponents(description.json)}
-        <Button {...button} />
+        {button?.text && <Button {...button} />}
       </div>
     </section>
   );

@@ -13,4 +13,5 @@ export interface DuplexProps {
     json: Document;
   };
   button?: ButtonProps;
+  imagePosition?: 'Left' | 'Right';
 }
